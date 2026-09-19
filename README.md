@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=1200&color=2F81F7&center=true&vCenter=true&width=700&lines=Ol%C3%A1%2C+eu+sou+o+Jo%C3%A3o+Guimar%C3%A3es;Estudante+de+Engenharia+de+Software;Explorando+Python%2C+Java+e+desenvolvimento+web" alt="Animação de texto com a minha apresentação" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=1200&color=2F81F7&center=true&vCenter=true&width=700&lines=Ol%C3%A1%2C+eu+sou+o+Jo%C3%A3o+Guimar%C3%A3es;Estudante+de+Engenharia+de+Software;Explorando+Python%2C+Java%2C+HTML%2C+CSS+e+JavaScript;Bem-vindo+ao+meu+GitHub%21" alt="Animação de texto com a minha apresentação" />
 </p>
 
 ## Sobre mim
