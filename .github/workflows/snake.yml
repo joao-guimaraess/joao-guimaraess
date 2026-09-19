@@ -1,0 +1,40 @@
+name: Gerar cobrinha animada
+
+on:
+  # roda todo dia às 03:00 UTC (00:00 no horário de Brasília)
+  schedule:
+    - cron: "0 3 * * *"
+  # permite rodar manualmente pela aba Actions
+  workflow_dispatch:
+  # roda também quando você edita algo na branch main
+  push:
+    branches:
+      - main
+
+# necessário para o workflow conseguir salvar as imagens na branch "output"
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      # lê o gráfico de contribuições e gera duas imagens da cobrinha (tema claro e tema escuro)
+      - name: Gerar as imagens da cobrinha
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+
+      # salva as imagens em uma branch chamada "output", para não misturar com o código
+      - name: Salvar as imagens na branch output
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
